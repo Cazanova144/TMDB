@@ -82,7 +82,7 @@ const getCredits = async (id) => {
  * Get actor
  */
 const getActor = async (id) => {
-    return get(`/person/${id}?api_key=${API_KEY}&language=en-US`)
+    return get(`/person/${id}?api_key=${API_KEY}&language=en-US&append_to_response=credits`)
 }
 
 export default {
