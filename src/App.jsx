@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router'
-import { ReactQueryDevTools } from 'react-query/devtools'
+import { ReactQueryDevtools } from 'react-query/devtools'
 import './assets/scss/App.scss'
 import Navigation from './components/Navigation'
 import HomePage from './pages/HomePage'
@@ -27,6 +27,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
+      <ReactQueryDevtools />
     </div>
   )
 }
