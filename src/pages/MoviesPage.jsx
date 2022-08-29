@@ -4,25 +4,22 @@ import useNowPlaying from '../hooks/useNowPlaying'
 import LoadingSpinner from '../components/LoadingSpinner'
 import WarningAlert from '../components/alerts/WarningAlert'
 import { Link } from 'react-router-dom'
+import HorizontalScroll from 'react-scroll-horizontal'
 
 const MoviesPage = () => {
     const { data: now_playing, error: nowPlayingError, isError: nowPlayingIsError, isLoading: nowPlayingIsLoading } = useNowPlaying()
-
-    // console.log(now_playing)
-
-    // const nowPlayingArray = now_playing.results
-
-    // console.log(nowPlayingArray)
 
     return (
         <Container className="py-3">
             <h1>List of Movies</h1>
 
+            <h2 className="py-3">Now playing in theatres</h2>
+
             {nowPlayingIsLoading && <LoadingSpinner />}
 
             {nowPlayingError && <WarningAlert message={nowPlayingError.message} />}
 
-            <Row>
+            <HorizontalScroll style={{ width: '100vw', height: '15rem' }} reverseScroll={true} >
                 {now_playing && now_playing.results.map(nowPlaying => (
 
                     <Col key={nowPlaying.id} className="mb-5 justify-content-center">
@@ -38,12 +35,10 @@ const MoviesPage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-  
-                ))}
-            </Row>
 
-            
-                
+                ))}
+            </HorizontalScroll>
+
         </Container>
     )
 }
