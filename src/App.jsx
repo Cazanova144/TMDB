@@ -3,7 +3,6 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import './assets/scss/App.scss'
 import Navigation from './components/Navigation'
 import HomePage from './pages/HomePage'
-import ActorsPage from './pages/ActorsPage'
 import MoviesPage from './pages/MoviesPage'
 import NotFound from './pages/NotFound'
 import ActorPage from './pages/ActorPage'
@@ -17,7 +16,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/actors" element={<ActorsPage />} />
         <Route path="/actors/:id" element={<ActorPage />} />
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/movies/:id" element={<MoviePage /> } />
