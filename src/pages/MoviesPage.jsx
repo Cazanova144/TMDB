@@ -24,7 +24,7 @@ const MoviesPage = () => {
 
             {nowPlayingError && <WarningAlert message={nowPlayingError.message} />}
 
-            <HorizontalScroll style={{ width: '80vw', height: '15rem' }} reverseScroll={true} >
+            <HorizontalScroll style={{ width: '80vw', height: '21rem' }} reverseScroll={true} >
                 {now_playing && now_playing.results.map(nowPlaying => (
 
                     <CardComponent movie={nowPlaying} />
@@ -38,7 +38,7 @@ const MoviesPage = () => {
 
             {popularIsError && <WarningAlert message={popularError.message} />}
 
-            <HorizontalScroll style={{ width: '80vw', height: '15rem' }} reverseScroll={true} >
+            <HorizontalScroll style={{ width: '80vw', height: '21rem' }} reverseScroll={true} >
                 {popular && popular.results.map(Popular => (
 
                     <CardComponent movie={Popular} />
@@ -52,7 +52,7 @@ const MoviesPage = () => {
 
             {topRatedIsError && <WarningAlert message={topRatedError.message} />}
 
-            <HorizontalScroll style={{ width: '80vw', height: '15rem' }} reverseScroll={true} >
+            <HorizontalScroll style={{ width: '80vw', height: '21rem' }} reverseScroll={true} >
                 {top_rated && top_rated.results.map(toprated => (
 
                     <CardComponent movie={toprated} />

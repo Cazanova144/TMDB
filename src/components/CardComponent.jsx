@@ -3,9 +3,12 @@ import { Card, Button, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const CardComponent = ({ movie }) => {
+    const imageBaseURL = 'https://image.tmdb.org/t/p/w500'
+
     return (
-        <Col key={movie.id} className="mb-5 justify-content-center">
-            <Card style={{ width: '20rem', height: '15rem', display: 'flex' }} >
+        <Col key={movie.id} className="mb-5 d-flex">
+            <Card style={{ width: '20rem', height: '21rem' }} >
+                <Card.Img variant="top" src={imageBaseURL + movie.poster_path} style={{ height: '7rem', width: '6rem' }} />
                 <Card.Body>
                     <Card.Title as="h3">{movie.title}</Card.Title>
 
