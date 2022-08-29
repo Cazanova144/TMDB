@@ -93,5 +93,6 @@ export default {
     getNowPlaying,
     getTrending,
     getPopular,
-    getCredits
+    getCredits,
+    getActor
 }
