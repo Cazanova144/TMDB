@@ -65,6 +65,13 @@ const getTrending = async () => {
 }
 
 /**
+ * Get popular movies this week
+ */
+const getPopular = async () => {
+    return get(`/movie/popular?api_key=${API_KEY}&language=en-US`)
+}
+
+/**
  * Get credits
  */
 const getCredits = async (id) => {
@@ -78,5 +85,6 @@ export default {
     getTopRated,
     getNowPlaying,
     getTrending,
+    getPopular,
     getCredits
 }
