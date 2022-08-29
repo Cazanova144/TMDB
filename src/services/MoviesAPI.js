@@ -25,7 +25,7 @@ const get = async (endpoint) => {
  * Get movie 
  */
 const getMovie = async (id) => {
-    return get(`/movie/${id}?api_key=${API_KEY}&language=en-US`)
+    return get(`/movie/${id}?api_key=${API_KEY}&language=en-US&append_to_response=credits`)
 }
 
 /**
