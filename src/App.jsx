@@ -9,7 +9,6 @@ import NotFound from './pages/NotFound'
 import ActorPage from './pages/ActorPage'
 import MoviePage from './pages/MoviePage'
 import GenresPage from './pages/GenresPage'
-import GenrePage from './pages/GenrePage'
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/movies/:id" element={<MoviePage /> } />
         <Route path="/genres" element={<GenresPage />} />
-        <Route path="/genres/:id" element={<GenrePage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
