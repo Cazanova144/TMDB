@@ -7,7 +7,7 @@ const CardComponent = ({ movie }) => {
 
     return (
         <Col key={movie.id} className="mb-5 d-flex">
-            <Card style={{ width: '20rem', height: '21rem' }} >
+            <Card style={{ width: '20rem', height: '24rem' }} >
                 <Card.Body>
                     <Card.Img variant="top" src={imageBaseURL + movie.poster_path} style={{ height: '7rem', width: '6rem' }} />
 
