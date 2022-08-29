@@ -16,7 +16,7 @@ const CardComponent = ({ movie }) => {
 
                     <Card.Text>Score: {movie.vote_average}</Card.Text>
 
-                    <Button as={Link} to="/movies/:id">Read more</Button>
+                    <Button as={Link} to={`/movies/${movie.id}`}>Read more</Button>
                 </Card.Body>
             </Card>
         </Col>
