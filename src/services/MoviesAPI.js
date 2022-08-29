@@ -70,3 +70,13 @@ const getTrending = async () => {
 const getCredits = async (id) => {
     return get(`/movie/${id}/credits?api_key=${API_KEY}&language=en-US`)
 }
+
+export default {
+    getMovie,
+    getGenresList,
+    getMoviesByGenre,
+    getTopRated,
+    getNowPlaying,
+    getTrending,
+    getCredits
+}
