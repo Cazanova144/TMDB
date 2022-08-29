@@ -49,7 +49,7 @@ const MoviePage = () => {
 
                             <h2 className="my-3">Cast</h2>
 
-                            <HorizontalScroll style={{ height: '62vh' }} reverseScroll={true}>
+                            <HorizontalScroll style={{ height: '40vh' }} reverseScroll={true}>
                                     {movie.credits.cast.map(castMember => (
                                         <Card key={castMember.credit_id} style={{ width: '12vw' }}>
                                             
