@@ -25,7 +25,7 @@ const get = async (endpoint) => {
  * Get movie 
  */
 const getMovie = async (id) => {
-    return get(`/movie/${id}?api_key=${API_KEY}&language=en-US&append_to_response=credits`)
+    return get(`/movie/${id}?api_key=${API_KEY}&language=en-US&append_to_response=credits&include_adult=false`)
 }
 
 /**
@@ -47,35 +47,21 @@ const getMoviesByGenre = async ({queryKey}) => {
  * Get top rated 
  */
 const getTopRated = async () => {
-    return get(`/movie/top_rated?api_key=${API_KEY}&language=en-US`)
+    return get(`/movie/top_rated?api_key=${API_KEY}&language=en-US&include_adult=false`)
 }
 
 /**
  * Get now playing
  */
 const getNowPlaying = async () => {
-    return get(`/movie/now_playing?api_key=${API_KEY}&language=en-US`)
-}
-
-/**
- * Get trending movies this week
- */
-const getTrending = async () => {
-    return get(`/trending/movie/week?api_key=${API_KEY}&language=en-US`)
+    return get(`/movie/now_playing?api_key=${API_KEY}&language=en-US&include_adult=false`)
 }
 
 /**
  * Get popular movies this week
  */
 const getPopular = async () => {
-    return get(`/movie/popular?api_key=${API_KEY}&language=en-US`)
-}
-
-/**
- * Get credits
- */
-const getCredits = async (id) => {
-    return get(`/movie/${id}/credits?api_key=${API_KEY}&language=en-US`)
+    return get(`/movie/popular?api_key=${API_KEY}&language=en-US&include_adult=false`)
 }
 
 /**
@@ -91,8 +77,6 @@ export default {
     getMoviesByGenre,
     getTopRated,
     getNowPlaying,
-    getTrending,
     getPopular,
-    getCredits,
     getActor
 }
