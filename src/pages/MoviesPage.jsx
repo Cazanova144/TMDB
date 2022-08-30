@@ -9,6 +9,7 @@ import usePopular from '../hooks/usePopular'
 import useTopRated from '../hooks/useTopRated'
 
 const MoviesPage = () => {
+    // Extract data and state values from custom hook
     const { data: now_playing, error: nowPlayingError, isError: nowPlayingIsError, isLoading: nowPlayingIsLoading } = useNowPlaying()
     const { data: popular, error: popularError, isError: popularIsError, isLoading: popularIsLoading } = usePopular()
     const { data: top_rated, error: topRatedError, isError: topRatedIsError, isLoading: topRatedIsLoading } = useTopRated()

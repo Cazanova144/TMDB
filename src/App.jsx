@@ -23,7 +23,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <ReactQueryDevtools />
+      {/* Only used in development mode */}
+      {/* <ReactQueryDevtools /> */}
     </div>
   )
 }

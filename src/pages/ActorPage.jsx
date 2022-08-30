@@ -7,11 +7,12 @@ import { useParams, Link } from 'react-router-dom'
 import HorizontalScroll from 'react-scroll-horizontal'
 
 const ActorPage = () => {
+    // Take id from params, which we use to get actor
     const { id } = useParams()
+    // Extract data and state values from custom hook
     const { data: actor, error, isError, isLoading } = useActor(id)
+    // Base url for getting images
     const imageBaseURL = 'https://image.tmdb.org/t/p/w500'
-
-    console.log(actor)
 
     return (
         <Container className="py-3">

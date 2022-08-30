@@ -7,11 +7,12 @@ import useMovie from '../hooks/useMovie'
 import HorizontalScroll from 'react-scroll-horizontal'
 
 const MoviePage = () => {
+    // Take id from params, which we use to get actor
     const { id } = useParams()
+    // Extract data and state values from custom hook
     const { data: movie, error, isError, isLoading } = useMovie(id)
+    // Base url for getting images
     const imageBaseURL = 'https://image.tmdb.org/t/p/w500'
-
-    console.log(movie)
 
     return (
         <Container className="py-3">

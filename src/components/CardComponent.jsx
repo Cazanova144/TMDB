@@ -2,6 +2,8 @@ import React from 'react'
 import { Card, Button, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+// Component used for cards in 'MoviesPage.jsx' and 'GenresPage.jsx'
+
 const CardComponent = ({ movie }) => {
     const imageBaseURL = 'https://image.tmdb.org/t/p/w500'
 
