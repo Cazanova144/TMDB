@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Dropdown, Row, Col, Button } from 'react-bootstrap'
+import { Container, Dropdown, Button } from 'react-bootstrap'
 import LoadingSpinner from '../components/LoadingSpinner'
 import WarningAlert from '../components/alerts/WarningAlert'
 import useGenresList from '../hooks/useGenresList'
