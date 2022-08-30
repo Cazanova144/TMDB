@@ -50,11 +50,11 @@ const ActorPage = () => {
 
                             <HorizontalScroll style={{ height: '48vh' }} reverseScroll={true}>
                                 {actor.credits.cast.map(castMember => (
-                                    <Card key={castMember.credit_id} style={{ width: '12vw' }}>
+                                    <Card key={castMember.credit_id} style={{ width: '12rem', height: '26rem' }}>
                                         <Card.Body>
-                                            <Card.Img src={imageBaseURL + castMember.poster_path} style={{ width: '10vw' }} />
+                                            <Card.Img src={imageBaseURL + castMember.poster_path} style={{ width: '6rem' }} />
 
-                                            <h3>{castMember.title}</h3>
+                                            <h4>{castMember.title}</h4>
 
                                             <p>{castMember.character}</p>
 
