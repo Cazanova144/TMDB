@@ -32,7 +32,7 @@ const getMovie = async (id) => {
  * Get movie genres
  */
 const getGenresList = async () => {
-    return get(`/genre/tv/list?api_key=${API_KEY}&language=en-US`)
+    return get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
 }
 
 /**
